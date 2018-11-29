@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/style.css">
+	<style>
+		body{
+			padding: 30px;
+		}
+	</style>
+</head>
+<body>
+	<form action="" class="form-horizontal" onsubmit="return false;">
+		<div class="form-group">
+			<label class="label-control col-md-2">卡券名称：</label>
+			<div class="col-md-3">
+				<input type="text" name="name" class="form-control" value=""></input>			
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="label-control col-md-2">适用项目：</label>
+			<div class="col-md-3">
+				<select name="item" class="form-control">
+					
+				</select>				
+			</div>
+		</div>					
+		<div class="form-group">
+			<label class="label-control col-md-2">有效期/天：</label>
+			<div class="col-md-3">
+				<input type="number" name="expire" class="form-control" value=""></input>			
+			</div>
+		</div>	
+		<div class="form-group">
+			<label class="label-control col-md-2">满多少起用：</label>
+			<div class="col-md-3">
+				<input type="number" name="miniamount" class="form-control" value=""></input>			
+			</div>
+		</div>			
+		<div class="form-group">
+			<label class="label-control col-md-2">卡券面额：</label>
+			<div class="col-md-3">
+				<input type="number" name="value" class="form-control" value=""></input>			
+			</div>
+		</div>				
+						
+		<div class="form-group">
+			<input type="submit" value="新增卡券" class="btn btn-primary btn-sm col-md-offset-2">
+		</div>
+	</form>
+</body>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/manage/jquery.cookie.js"></script>
+<script src="../../js/plugins/layer/layer.min.js"></script>
+<script src="../../js/manage/basic.js"></script>
+<script src="../../js/manage/common.js"></script>
+<script src="../../js/manage/card/add_card.js"></script>
+</html>
