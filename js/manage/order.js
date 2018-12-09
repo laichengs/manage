@@ -25,19 +25,16 @@ $(function(){
 		//pageList: ['10', '20', '30'],
 		columns: [
 			{
-				'checkbox': true
-			},
-			{
-				field: 'order_no',
-				title: '编号'
+				title: '编号',
+				field: 'id'
 			},
 			{
 				field: 'phone',
-				title: '联系电话'
+				title: '电话'
 			},
 			{
 				field:'count',
-				title: '预约数量'
+				title: '数量'
 			},
 			{
 				title: '付款方式',
@@ -55,30 +52,28 @@ $(function(){
 						case "4":
 						return '<span class="text-default">代金券支付</span>';
 						break;
+						case "5":
+						return '<span class="text-primary">线下交易</span>';
+						break;
 					}
 				}
 			},
 			{
-				title: '预约项目',
-				formatter: function(value, row, index){
-					return row.item.name;
-				}
+				title: '项目',
+				field: 'snap_name'
 			},
 			{
 				title: '预约人',
-				formatter: function(value, row, index){
-					return row.address.name;
-				}
+				field: 'order_name'
 			},
 			{
-				title: '预约地址',
-				formatter: function(value, row, index){
-					return row.address.address;
-				}
+				title: '地址',
+				width: 100,
+				field: 'address'
 			},
 			{
 				field: 'status',
-				title: '订单状态',
+				title: '状态',
 				formatter: function(value, row, index){
 					switch(value){
 						case '1':
@@ -97,35 +92,61 @@ $(function(){
 				}
 			},
 			{
-				title: '预约日期',
+				title: '日期',
 				field: 'order_data'
 			},
 			{
-				title: '预约时间',
+				title: '时间',
 				field: 'order_time'
 			},
 			{
-				title: '订单金额',
+				title: '金额',
 				formatter: function(value, row, index){
 					return  row.count * row.snap_price + '元'
 				}
 			},
 			{
+				title: '用户备注',
+				width: 60,
+				field: 'remark'
+			},
+			{
+				title: '下单日期',
+				field: 'create_time'
+			},
+			{
 				title: '更改状态',
 				align: 'center',
 				formatter: function(value, row, index){
-					return '<span class="btn btn-xs btn-primary" onclick="changeStatus('+row.id+')">点击变为已服务</span>';
+					return '<span class="btn btn-xs btn-primary" onclick="changeStatus('+row.id+')">变为已服务</span>';
+				}
+			},
+			{
+				title: '是否线上',
+				align: 'center',
+				width: 100,
+				formatter: function(value, row, index){
+					if(row.online == 1){
+						return '<span>线上</span><a href="javascript:changeOnline('+ row.id +',false)">[变线下]</a>';
+					}else{
+						return '<span class="text-danger">线下</span>'
+					}
 				}
 			},
 			{
 				title: '备注',
 				align: 'center',
+				width: 100,
 				formatter: function(value, row, index){
 					if(row.server_remark){
 						return '<span>'+row.server_remark+'</span>';
-					}else{
-						return '<button class="btn btn-xs btn-success" onclick="addServerRemark('+row.id+')">点击添加</button>'
-					}					
+					}				
+				}
+			},
+			{
+				title: '操作',
+				formatter: function(value, row ,index){
+					return '<button class="btn btn-xs btn-success" onclick="addServerRemark('+row.id+')">编辑备注</button>'
 				}
 			}
 		]
@@ -191,3 +212,21 @@ $('body').on('click', '.confirm', ()=>{
 		}
 	});
 })
+
+function changeOnline(id, flag){
+	let status = flag == true ? 1 : 0;
+	$.ajax({
+		url: baseUrl + '/api/manage/order_online',
+		type:'put',
+		data: {
+			id: id,
+			status: status
+		},
+		success: function(res){
+			console.log(res);	
+			if(res){
+				location.reload();
+			}
+		}
+	})
+}

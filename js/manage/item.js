@@ -76,7 +76,7 @@ $(function(){
 				title: '操作',
 				align: 'center',
 				formatter: function(value, row, index){
-					return '<span class="btn btn-danger btn-xs" onclick="editItem('+row.id+')">编辑</span>&nbsp;&nbsp;<span class="btn btn-warning btn-xs" onclick="deleteItem('+row.id+')">删除</span>';
+					return '<span class="btn btn-danger btn-xs" onclick="editItem('+row.id+')">编辑</span>&nbsp;&nbsp;<span class="btn btn-warning btn-xs" onclick="deleteItem('+row.id+')">删除</span>&nbsp;&nbsp;<span class="btn btn-success btn-xs" onclick="editType('+row.id+')">类型编辑</span>';
 				}
 			}
 		]
@@ -101,6 +101,11 @@ function hello(id, that){
 function editItem(id){
 	$.cookie('item_Id', id);
 	location.href="edit_item.html";
+}
+
+function editType(id){
+	$.cookie('item_Id', id);
+	location.href="pages/item_type/item_type.html";
 }
 
 function deleteItem(id){

@@ -43,7 +43,7 @@
 <script>
 	$('#clear').click(()=>{
 		$.ajax({
-			url: baseUrl + '/api/cache',
+			url: 'https://minicdn.meijinguanjia.com' + '/api/cache',
 			type: 'DELETE',
 			success: function(){
 				alert("清除成功");

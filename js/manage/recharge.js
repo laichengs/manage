@@ -71,9 +71,9 @@ $(function(){
 				field: 'status',
 				formatter: function(value, row, index){
 					if(value == '0'){
-						return '<span class="text-danger">充值失败</span>';
+						return '<span class="text-default">充值失败</span>';
 					}else if(value == '1'){
-						return '<span class="text-success">充值成功</span>';
+						return '<span class="text-danger">充值成功</span>';
 					}
 				}
 			}

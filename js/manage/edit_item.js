@@ -132,7 +132,7 @@ $(document).on('change', '#file', function(){
 	var form = document.getElementById('form');
 	var formData = new FormData(form);
 	$.ajax({
-		url: baseUrl + '/api/manage/upload',
+		url: 'https://minicdn.meijinguanjia.com' + '/api/manage/upload',
 		type: 'post',
 		cache: false,
 		data: formData,
