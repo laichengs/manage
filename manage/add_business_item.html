@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		body{
+			padding: 30px;
+		}
+	</style> 
+</head>
+<body>
+	<form action="" class="form-horizontal" onsubmit="return false;">
+		<div class="form-group">
+			<label class="label-control col-md-2">商家地址：</label>
+			<div class="col-md-3">
+				<input type="text" name="address" class="form-control" value=""></input>			
+			</div>
+		</div>				
+		<div class="form-group" class="group">
+			<label class="label-control col-md-2">缩略图：</label>
+			<img src="https://minicdn.meijinguanjia.com/image/default_menu.png" style="width:50px;height:50px" class="thumb">	
+			<input type="text" value="" name="thumb"></input>	
+			<button class="btn btn-primary btn-sm col-md-offset-1" onclick="changeImg(this)">更换</button>	
+		</div>	
+		<div class="form-group">
+			<label class="label-control col-md-2">描述：</label>
+			<div class="col-md-3">
+				<input type="text" name="describe" class="form-control" value=""></input>			
+			</div>
+		</div>	
+		<div class="form-group">
+			<label class="label-control col-md-2">标签：</label>
+			<div class="col-md-3">
+				<input type="text" name="tag" class="form-control" value=""></input>			
+			</div>
+		</div>	
+		<div class="form-group">
+			<label class="label-control col-md-2">精度（latitude）：</label>
+			<div class="col-md-3">
+				<input type="text" name="latitude" class="form-control" value=""></input>			
+			</div>
+		</div>	
+		<div class="form-group">
+			<label class="label-control col-md-2">纬度（longitude）：</label>
+			<div class="col-md-3">
+				<input type="text" name="longitude" class="form-control" value=""></input>			
+			</div>
+		</div>					
+		<div class="form-group">
+			<label class="label-control col-md-2">电话：</label>
+			<div class="col-md-3">
+				<input type="text" name="phone" class="form-control" value=""></input>			
+			</div>
+		</div>			
+		<div class="form-group">
+			<label class="label-control col-md-2">是否推荐：</label>
+			<div class="col-md-3">
+				<input type="radio" name="recommend" class="" value="1"></input>是	
+				<input type="radio" name="recommend" class="" value="0" checked="checked"></input>否	
+			</div>
+		</div>	
+		<div class="form-group">
+			<label class="label-control col-md-2">所属商家：</label>
+			<div class="col-md-3">
+				<select name="business" class="form-control">
+					
+				</select>			
+			</div>
+		</div>							
+		<div class="form-group">
+			<input type="submit" value="新增商家" class="btn btn-primary btn-sm col-md-offset-2">
+		</div>
+	</form>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/manage/jquery.cookie.js"></script>
+<script src="js/plugins/layer/layer.min.js"></script>
+<script src="js/manage/basic.js"></script>
+<script src="js/manage/common.js"></script>
+<script src="js/manage/add_business_item.js"></script>
+</html>

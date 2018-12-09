@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/plugins/bootstrap-table/bootstrap-table.min.css">
+	<style>
+		body{
+			padding: 30px;
+		}
+		.tool{
+			overflow: hidden;
+			margin-bottom:20px;
+			padding: 20px 0;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+		.tool input, .tool select{
+			margin: 0 10px;
+			width: 150px;
+		}
+		#btn-box{
+			position: absolute;
+			right: 30px;
+		}
+		#search{
+			margin-left: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="tool">
+		<div id="btn-box">
+			<button class="btn btn-warning" id="add">新增栏目</button>		
+		</div>
+	</div>
+	
+	<table id="card_combo"></table>
+</body>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/manage/jquery.cookie.js"></script>
+<script src="../../js/plugins/layer/layer.min.js"></script>
+<script src="../../js/plugins/bootstrap-table/bootstrap-table.min.js"></script>
+<script src="../../js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="../../js/manage/basic.js"></script>
+<script src="../../js/manage/common1.js"></script>
+<script src="../../js/manage/card_combo/card_combo.js"></script>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="ite.html" method="post" enctype="multipart/form-data" id="form">
+		<input type="file" name="image" id="file">
+	</form>
+	<img src="http://l.cn/manage/uploads/20180914/ba5bf89aa4fa7c376a1aba3418529572.jpg" alt="">
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/manage/jquery.cookie.js"></script>
+<script src="js/manage/basic.js"></script>
+<!-- <script src="js/manage/common.js"></script> -->
+<script>
+var str = 'http://l.cn/image/sjfa.png';
+var index = str.indexOf('/image');
+alert(str.substring(index));
+</script>
+</html>
