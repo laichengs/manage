@@ -101,9 +101,7 @@ $(function(){
 			},
 			{
 				title: '金额',
-				formatter: function(value, row, index){
-					return  row.count * row.snap_price + '元'
-				}
+				field: 'total_price'
 			},
 			{
 				title: '用户备注',
