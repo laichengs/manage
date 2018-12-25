@@ -142,7 +142,7 @@ $(function(){
 		};
 		console.log(data);
 		$.ajax({
-			url: '/api/manage/update_theme_item',
+			url: baseUrl + '/api/manage/update_theme_item',
 			type: 'post',
 			data:{
 				params: data

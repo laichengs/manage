@@ -1,4 +1,4 @@
-var baseUrl = "http://adminapi.meijinguanjia.com";
+var baseUrl = "http://admin.cn";
 var imgUrl  = "https://minicdn.meijinguanjia.com";
 var token_expire = 70000;
 
