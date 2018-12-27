@@ -18,7 +18,7 @@ $(function(){
 
 	/*获取栏目数据*/
 	$.ajax({
-		url: baseUrl + '/api/manage/city',
+		url: baseUrl + '/api/manage/city_info',
 		type: 'get',
 		success: function(res){
 			console.log(res);

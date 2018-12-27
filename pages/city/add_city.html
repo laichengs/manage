@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/style.css">
+	<style>
+		body{
+			padding: 30px; 
+		}
+	</style>
+</head>
+<body>
+	<form action="" class="form-horizontal" onsubmit="return false;">
+		<div class="form-group">
+			<label class="label-control col-md-2">子属性名称：</label>
+			<div class="col-md-3">
+				<input type="text" class="form-control" name="title">
+			</div>
+		</div>
+		<div class="form-group" class="group">
+			<label class="label-control col-md-2">缩略图：</label>
+			<img src="https:minicdn.meijinguanjia.com/image/default_menu.png" style="width:50px;height:50px" class="thumb">	
+			<input type="text" value="" name="thumb"></input>	
+			<button class="btn btn-primary btn-sm col-md-offset-1" onclick="changeImg(this)">更换</button>	
+		</div>
+		<div class="form-group">
+			<label class="label-control col-md-2">单位：</label>
+			<div class="col-md-3">
+				<input type="text" class="form-control" name="unit">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="label-control col-md-2">价格：</label>
+			<div class="col-md-3">
+				<input type="number" class="form-control" name="price">
+			</div>
+		</div>
+											
+		<div class="form-group">
+			<input type="submit" value="新增子属性" class="btn btn-primary btn-sm col-md-offset-2">
+		</div>
+	</form>
+</body>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/manage/jquery.cookie.js"></script>
+<script src="../../js/plugins/layer/layer.min.js"></script>
+<script src="../../js/manage/basic.js"></script>
+<script src="../../js/manage/common.js"></script>
+<script src="../../js/manage/city/add_city.js"></script>
+</html>
