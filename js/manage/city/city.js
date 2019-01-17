@@ -18,7 +18,6 @@ $(function(){
 				start: params.offset
 			}
 		},
-		//pageList: ['10', '20', '30'],
 		columns: [
 			{
 				title: '序号',

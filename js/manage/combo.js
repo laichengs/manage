@@ -83,9 +83,9 @@ $(function(){
 				title: '付款状态',
 				formatter: function(value, row, index){
 					if(row.status == 0){
-						return '<span class="text-danger">未付款</span>';
+						return '<span>未付款</span>';
 					}else if(row.status == 1){
-						return '<span class="text-success">已付款</span>';
+						return '<span class="text-danger">已付款</span>';
 					}
 				}
 			}
